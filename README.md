@@ -1,2 +1,2 @@
 # weather-app-ng
-Angular weather app
+Angular weather web app
