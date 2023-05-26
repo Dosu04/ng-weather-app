@@ -1,3 +1,3 @@
 # Dosu Sky Cast
-Angular weather forecast web app
+Weather forecast web application made with Angular and TypeScript.
 
