@@ -6,7 +6,7 @@
         <button type="submit" class="btn btn-primary">Get Weather</button>
     </form>
 
-
+<br><br>
 <ng-template #weatherDetails>
     <div class="card mb-3" style="max-width: 18rem;">
         <div class="card-header bg-transparent">
@@ -36,9 +36,29 @@
 
 <ng-template #loading>
     <h3>
-        No Weather Details!
-    </h3>
-    Enter City Name
+        Instructions:    
+    </h3><br><br>
+    <ul> 
+        <li>
+            Enter the name of the city for which you want to check the weather.
+        </li>
+        <li>
+            Click on the "Get Weather" button or press the "Enter" key to initiate the weather search.
+        </li>
+        <li>
+            The details may include the city name, temperature, humidity and weather condition (such as sunny, cloudy, rainy, etc.).
+        </li>
+        <li>
+            You have the option to switch between Celsius or Fahrenheit, using radio buttons.
+        </li>
+        <li>
+            Select the desired unit to update the temperature display accordingly.
+        </li>
+        <li>
+            If you want to check the weather for another city, you can clear the search and enter a new city name.
+        </li>
+
+    </ul>
 </ng-template>
 
 <div *ngIf="formSubmitted; then weatherDetails else loading"></div>
