@@ -1,0 +1,46 @@
+<div class="WEATHER-CONTAINER">
+    <form (ngSubmit)="getWeather()" class="form-inline" class="mb-3">
+        <div class="form-group">
+          <input type="text" class="form-control" [(ngModel)]="city" name="city" placeholder="Enter city name" /> <br>
+        </div>
+        <button type="submit" class="btn btn-primary">Get Weather</button>
+    </form>
+
+
+<ng-template #weatherDetails>
+    <div class="card mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent">
+        <h2>
+            {{city}}
+        </h2>    
+        <p class="WEATHER-IMAGE" class="bg-primary"><img [src]=iconURL alt="weather icon"></p>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Temp: {{temp}} °{{units == 'metric' ? 'C' : 'F' }}</p>
+            <p class="card-text">Pressure: {{press}} hPa</p>
+            <p class="card-text">Humidity: {{hum}}%</p>
+            <p class="card-text">Summary: {{summary}}</p>
+        </div>
+        <div class="card-footer bg-transparent">
+            <form action="" class="RADIO-BUTTONS">
+                <label for="" class="radio-inline">
+                    <input type="radio" (change)="radioUnitChange()" name="radioUnit" [checked]="units == 'metric' ? true : false "> °C
+                </label>
+                <label for="" class="radio-inline">
+                    <input type="radio" (change)="radioUnitChange()" name="radioUnit"> °F
+                </label>
+            </form>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #loading>
+    <h3>
+        No Weather Details!
+    </h3>
+    Enter City Name
+</ng-template>
+
+<div *ngIf="formSubmitted; then weatherDetails else loading"></div>
+
+</div>

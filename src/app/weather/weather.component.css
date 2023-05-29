@@ -1,0 +1,30 @@
+.WEATHER-CONTAINER{
+    display: grid;
+    justify-items: center;
+    margin-top: 1rem;
+}
+.card-header{
+    text-align: center;
+}
+
+.RADIO-BUTTONS{
+    display: flex;
+    justify-content: space-around;
+}
+
+.WEATHER-IMAGE{
+    padding: 0.5rem;
+}
+
+.form-group input{
+    border-radius: 0;
+    
+}
+.card{
+    border: none;
+    background-color: #0f0f0f;
+    color: white;
+}
+.card-body{
+
+}
